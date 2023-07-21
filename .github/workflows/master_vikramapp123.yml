@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'vikramapp123'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_42068AF012CD4E6C907427C106090404 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_341FE2C87C29487FB52F12A7E8547BCB }}
           package: .
