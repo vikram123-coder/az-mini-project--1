@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: '16.x'
 
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -46,5 +52,5 @@ jobs:
         with:
           app-name: 'vikram-mp01-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_53E570FCC6354CCCA1F09D69852B2426 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F49643C45BCF4A2795B316C5FF54A4FF }}
           package: .
